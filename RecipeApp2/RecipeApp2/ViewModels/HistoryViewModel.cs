@@ -18,6 +18,7 @@ namespace RecipeApp2.ViewModels
         public ObservableCollection<RecipeModel> Items { get; set; }
 
         public RecipeModel SelectedRecipe { get; set; }
+        public SaveRecipe SelectedSaveRecipe { get; set; }
 
         public HistoryViewModel()
         {

@@ -29,14 +29,40 @@ namespace RecipeApp2.ViewModels
                 {
                     Preparation = string.Join("\n", preparation.conteudo.Where(c => !string.IsNullOrWhiteSpace(c)));
                 }
+            }           
+
+                OnPropertyChanged(nameof(Ingredients));
+                OnPropertyChanged(nameof(Preparation));
+        }
+
+        public DetailsRecipeViewModel(SaveRecipe recipeModel)
+        {
+            Id = recipeModel.Id; 
+            Title = recipeModel.Name;
+            Ingredients = "";
+            Preparation = "";
+
+            if (recipeModel.Name != null)
+            {
+                var ingredients = recipeModel.Ingredients;
+                var preparation = recipeModel.Preparation;
+
+                if (ingredients != null)
+                {
+                    Ingredients = string.Join("\n", ingredients);
+                }
+                if (preparation != null)
+                {
+                    Preparation = string.Join("\n", preparation);
+                }
             }
-
-
             OnPropertyChanged(nameof(Ingredients));
             OnPropertyChanged(nameof(Preparation));
         }
 
+
         public string Ingredients { get; set; }
         public string Preparation { get; set; }
+        public int Id { get; set; }
     }
 }

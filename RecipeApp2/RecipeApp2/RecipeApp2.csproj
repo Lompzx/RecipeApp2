@@ -18,13 +18,28 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="View\HistoryDetailPage.xaml.cs">
+      <DependentUpon>HistoryDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\MyRecipePage.xaml.cs">
+      <DependentUpon>MyRecipePage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Update="View\AddEmailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\AddRecipePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\DetailsRecipePage.xaml">
+    <EmbeddedResource Update="View\FavoritePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\FavoritePageDetails.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\HistoryDetailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\HistoryPage.xaml">
@@ -36,7 +51,7 @@
     <EmbeddedResource Update="View\MyRecipePageDetails.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\MyRecipesPage.xaml">
+    <EmbeddedResource Update="View\MyRecipePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

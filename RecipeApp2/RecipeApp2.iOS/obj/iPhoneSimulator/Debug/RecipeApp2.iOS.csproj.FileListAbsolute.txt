@@ -54,7 +54,6 @@ E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.iOS\bin\iPhoneSimulat
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.iOS\bin\iPhoneSimulator\Debug\zh-Hant\Xamarin.Forms.Platform.iOS.resources.dll
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.iOS\bin\iPhoneSimulator\Debug\RecipeApp2.dll
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.iOS\bin\iPhoneSimulator\Debug\RecipeApp2.pdb
-E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.iOS\bin\iPhoneSimulator\Debug\RecipeApp2.dll.mdb
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.iOS\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.iOS\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.iOS\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items

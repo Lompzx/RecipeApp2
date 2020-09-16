@@ -5,7 +5,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              xmlns:local="clr-namespace:RecipeApp2"
-             x:Class="RecipeApp2.MainPage">
+             x:Class="RecipeApp2.MainPage"             
+             NavigationPage.HasNavigationBar="False"
+             >
 
     <StackLayout VerticalOptions="Center"
                Margin="20,0,20,0">

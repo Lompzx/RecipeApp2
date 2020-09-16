@@ -17,9 +17,7 @@ namespace RecipeApp2.View
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class HistoryPage : ContentPage
-	{
-        //private readonly HttpClient _client = new HttpClient();
-        //private ObservableCollection<RecipeModel> _recipes;
+	{        
         HistoryViewModel viewModel;
         public HistoryPage ()
 		{

@@ -26,7 +26,7 @@ namespace RecipeApp2.Model
         public ObservableCollection<string> conteudo { get; set; }
     }
 
-    public class CreateRecipe
+    public class SaveRecipe
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }

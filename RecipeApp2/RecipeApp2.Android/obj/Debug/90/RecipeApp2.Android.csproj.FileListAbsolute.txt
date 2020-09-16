@@ -1,11 +1,11 @@
-E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
-E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\RecipeApp2.Android.nuget.stamp
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\bin\Debug\RecipeApp2.Android.dll
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\bin\Debug\RecipeApp2.Android.pdb
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\bin\Debug\com.companyname.RecipeApp2.apk
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\bin\Debug\com.companyname.RecipeApp2-Signed.apk
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\bin\Debug\RecipeApp2.dll
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\bin\Debug\RecipeApp2.pdb
+E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
+E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\RecipeApp2.Android.nuget.stamp
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\RecipeApp2.Android.csprojAssemblyReference.cache
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\libraryimports.cache.stamp
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\res.flag
