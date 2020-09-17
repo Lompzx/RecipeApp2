@@ -12,7 +12,7 @@
                 <ViewCell>
                     <StackLayout Padding="5" Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center">
                         <Label IsVisible="{Binding Favorite}" Text="★" TextColor="BlueViolet" FontSize="22" VerticalOptions="Center"/>
-                        <Label Text="{Binding nome}" VerticalOptions="Center" LineBreakMode="TailTruncation" MaxLines="2"></Label>
+                        <Label Text="{Binding Name}" VerticalOptions="Center" LineBreakMode="TailTruncation" MaxLines="1"></Label>
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>
