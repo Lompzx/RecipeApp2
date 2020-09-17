@@ -29,15 +29,15 @@ namespace RecipeApp2.ViewModels
                 {
                     Preparation = string.Join("\n", preparation.conteudo.Where(c => !string.IsNullOrWhiteSpace(c)));
                 }
-            }           
+            }
 
-                OnPropertyChanged(nameof(Ingredients));
-                OnPropertyChanged(nameof(Preparation));
+            OnPropertyChanged(nameof(Ingredients));
+            OnPropertyChanged(nameof(Preparation));
         }
 
         public DetailsRecipeViewModel(SaveRecipe recipeModel)
         {
-            Id = recipeModel.Id; 
+            Id = recipeModel.Id;
             Title = recipeModel.Name;
             Ingredients = "";
             Preparation = "";

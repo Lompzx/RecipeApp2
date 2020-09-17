@@ -12,17 +12,17 @@ using Xamarin.Forms.Xaml;
 
 namespace RecipeApp2.View
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class MyRecipesPage : ContentPage
-	{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class MyRecipesPage : ContentPage
+    {
 
         HistoryViewModel viewModel;
-        public MyRecipesPage ()
-		{
-			InitializeComponent ();
+        public MyRecipesPage()
+        {
+            InitializeComponent();
             BindingContext = viewModel = new HistoryViewModel();
         }
-       
+
 
         protected override void OnAppearing()
         {
@@ -39,7 +39,7 @@ namespace RecipeApp2.View
             //Capturando informacoes, desenvolver o envio para o MyRecipePageDetails
             if (viewModel.SelectedSaveRecipe != null)
             {
-               await Navigation.PushAsync(new MyRecipePageDetails(viewModel.SelectedSaveRecipe));
+                await Navigation.PushAsync(new MyRecipePageDetails(viewModel.SelectedSaveRecipe));
             }
         }
     }

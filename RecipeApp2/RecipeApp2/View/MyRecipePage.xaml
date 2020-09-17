@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
              x:Class="RecipeApp2.View.MyRecipesPage">
-    
+
     <ListView x:Name="RecipePostView"
               CachingStrategy="RecycleElement"
               ItemSelected="ListView_ItemSelected"
@@ -14,8 +14,8 @@
                     <StackLayout Padding="5" Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center">
                         <Label IsVisible="{Binding Favorite}" Text="★" TextColor="BlueViolet" FontSize="22" VerticalOptions="Center"/>
                         <Label Text="{Binding Name}" VerticalOptions="Center" LineBreakMode="TailTruncation" MaxLines="1"></Label>
-                    </StackLayout>    
-                </ViewCell>                
+                    </StackLayout>
+                </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>

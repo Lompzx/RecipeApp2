@@ -12,17 +12,17 @@ using Xamarin.Forms.Xaml;
 
 namespace RecipeApp2.View
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class AddEmailPage : ContentPage
-	{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class AddEmailPage : ContentPage
+    {
         SQLiteConnection Connection = new SQLiteConnection(App.DatabaseLocation);
 
-        public AddEmailPage ()
-		{
-			InitializeComponent ();
-		}
+        public AddEmailPage()
+        {
+            InitializeComponent();
+        }
 
-        void CreateEmailButton_Clicked(Object sender,EventArgs e)
+        void CreateEmailButton_Clicked(Object sender, EventArgs e)
         {
             bool IsEmailEmpty = string.IsNullOrWhiteSpace(EmailEntry.Text);
 
@@ -53,25 +53,25 @@ namespace RecipeApp2.View
                 }
             }
         }
-        
+
         bool EmailIsValid(string email)
         {
             string expression = "^[a-zA-Z][-_.a-zA-Z0-9]{5,29}@senac.edu.com.br$";
             if (Regex.IsMatch(email, expression))
             {
-                if (Regex.Replace(email,expression,string.Empty).Length == 0)
+                if (Regex.Replace(email, expression, string.Empty).Length == 0)
                 {
                     Connection.CreateTable<EmailModel>();
-                    var listEmail = Connection.Table<EmailModel>();                    
-                        foreach (var item in listEmail)
+                    var listEmail = Connection.Table<EmailModel>();
+                    foreach (var item in listEmail)
+                    {
+                        if (item.Email == email)
                         {
-                            if (item.Email == email)
-                            {
-                                DisplayAlert("Atenção", "Email já cadastrado!!", "OK");
-                                return false;
-                            }
+                            DisplayAlert("Atenção", "Email já cadastrado!!", "OK");
+                            return false;
                         }
-                    
+                    }
+
                     return true;
                 }
             }

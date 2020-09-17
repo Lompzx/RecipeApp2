@@ -8,5 +8,5 @@
 
     <local1:HistoryPage Icon="receita.png" Title="Receitas" />
     <local1:MyRecipesPage Icon="receita2.png" Title="Minhas Receitas"/>
-    <local1:FavoritePage Icon="receita3.png" Title="Favoritas"/>    
+    <local1:FavoritePage Icon="receita3.png" Title="Favoritas"/>
 </TabbedPage>

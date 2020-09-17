@@ -37,7 +37,7 @@ namespace RecipeApp2.View
                     Ingredients = viewModel.Ingredients,
                     Preparation = viewModel.Preparation,
                     Favorite = true
-                };                
+                };
                 Connection.CreateTable<SaveRecipe>();
                 int rowsQuantity = Connection.Update(recipeModel);
                 if (rowsQuantity > 0)
@@ -60,7 +60,7 @@ namespace RecipeApp2.View
         }
 
         bool FavoriteIsValid(int id)
-        {            
+        {
             Connection.CreateTable<SaveRecipe>();
             List<SaveRecipe> favorite = Connection.Table<SaveRecipe>().Where(c => c.Id == viewModel.Id).ToList();
             foreach (var item in favorite)

@@ -7,7 +7,7 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Cadastrar" Clicked="Create_Clicked"/>
     </ContentPage.ToolbarItems>
-    
+
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="8">
@@ -27,7 +27,7 @@
                         <Label Text="{Binding Preparation}" MaxLines="999" />
                     </StackLayout>
                 </Frame>
-                
+
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

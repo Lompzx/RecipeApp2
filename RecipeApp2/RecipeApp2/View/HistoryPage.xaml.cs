@@ -15,15 +15,15 @@ using RecipeApp2.ViewModels;
 
 namespace RecipeApp2.View
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class HistoryPage : ContentPage
-	{        
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class HistoryPage : ContentPage
+    {
         HistoryViewModel viewModel;
-        public HistoryPage ()
-		{
-			InitializeComponent ();
+        public HistoryPage()
+        {
+            InitializeComponent();
             BindingContext = viewModel = new HistoryViewModel();
-		}
+        }
 
         private async void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {

@@ -11,10 +11,10 @@ using Newtonsoft.Json;
 
 namespace RecipeApp2.ViewModels
 {
-   public class HistoryViewModel : BaseViewModel
+    public class HistoryViewModel : BaseViewModel
     {
-        private readonly HttpClient _client = new HttpClient();     
-        
+        private readonly HttpClient _client = new HttpClient();
+
         public ObservableCollection<RecipeModel> Items { get; set; }
 
         public RecipeModel SelectedRecipe { get; set; }
@@ -22,15 +22,15 @@ namespace RecipeApp2.ViewModels
 
         public HistoryViewModel()
         {
-            LoadingRecipes();          
+            LoadingRecipes();
         }
 
         async void LoadingRecipes()
         {
             string rescontent = await _client.GetStringAsync(Constants.RECIPEJSON_URL);
-            List<RecipeModel> recipes = JsonConvert.DeserializeObject<List<RecipeModel>>(rescontent);            
-            Items = new ObservableCollection<RecipeModel>(recipes);            
-            OnPropertyChanged(nameof(Items));            
+            List<RecipeModel> recipes = JsonConvert.DeserializeObject<List<RecipeModel>>(rescontent);
+            Items = new ObservableCollection<RecipeModel>(recipes);
+            OnPropertyChanged(nameof(Items));
         }
 
     }

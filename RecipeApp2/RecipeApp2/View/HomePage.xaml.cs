@@ -9,13 +9,13 @@ using Xamarin.Forms.Xaml;
 
 namespace RecipeApp2.View
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class HomePage : TabbedPage
-	{
-		public HomePage ()
-		{
-			InitializeComponent ();
-		}
-       
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class HomePage : TabbedPage
+    {
+        public HomePage()
+        {
+            InitializeComponent();
+        }
+
     }
 }

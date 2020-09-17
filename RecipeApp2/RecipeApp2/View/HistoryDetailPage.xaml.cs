@@ -21,9 +21,9 @@ namespace RecipeApp2.View
         {
             InitializeComponent();
 
-            BindingContext = viewModel = 
+            BindingContext = viewModel =
                 new DetailsRecipeViewModel(selectedRecipe);
-        }  
+        }
 
 
         private async void Create_Clicked(object sender, EventArgs e)
@@ -52,10 +52,10 @@ namespace RecipeApp2.View
             }
             else
             {
-                await DisplayAlert("Atenção","Receita já cadastrada","OK");
+                await DisplayAlert("Atenção", "Receita já cadastrada", "OK");
                 await Navigation.PopAsync();
-            }            
-            
+            }
+
         }
 
         bool RecipeIsValid(string name)
