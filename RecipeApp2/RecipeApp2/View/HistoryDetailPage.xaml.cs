@@ -16,7 +16,7 @@ namespace RecipeApp2.View
     public partial class DetailsRecipePage : ContentPage
     {
         DetailsRecipeViewModel viewModel;
-
+        SQLiteConnection Connection = new SQLiteConnection(App.DatabaseLocation);
         public DetailsRecipePage(RecipeModel selectedRecipe)
         {
             InitializeComponent();
@@ -28,25 +28,50 @@ namespace RecipeApp2.View
 
         private async void Create_Clicked(object sender, EventArgs e)
         {
-            SaveRecipe  recipeModel = new SaveRecipe()
-            {                
-                Name = viewModel.Title,
-                Ingredients = viewModel.Ingredients,
-                Preparation = viewModel.Preparation,
-                Favorite = false
-            };
-            SQLiteConnection Connection = new SQLiteConnection(App.DatabaseLocation);
-            Connection.CreateTable<SaveRecipe>();
-            int rowsQuantity = Connection.Insert(recipeModel);
-            if (rowsQuantity > 0)
+            if (!RecipeIsValid(viewModel.Title))
             {
-                await DisplayAlert("Sucesso!", "Receita cadastrada com sucesso", "OK");
-                await Navigation.PopAsync();
+                SaveRecipe recipeModel = new SaveRecipe()
+                {
+                    Name = viewModel.Title,
+                    Ingredients = viewModel.Ingredients,
+                    Preparation = viewModel.Preparation,
+                    Favorite = false
+                };
+
+                Connection.CreateTable<SaveRecipe>();
+                int rowsQuantity = Connection.Insert(recipeModel);
+                if (rowsQuantity > 0)
+                {
+                    await DisplayAlert("Sucesso!", "Receita cadastrada com sucesso", "OK");
+                    await Navigation.PopAsync();
+                }
+                else
+                {
+                    await DisplayAlert("Falha!", "Receita não cadastrada!", "OK");
+                }
             }
             else
             {
-                await DisplayAlert("Falha!", "Receita não cadastrada!", "OK");
-            }
+                await DisplayAlert("Atenção","Receita já cadastrada","OK");
+                await Navigation.PopAsync();
+            }            
+            
         }
+
+        bool RecipeIsValid(string name)
+        {
+            Connection.CreateTable<SaveRecipe>();
+            var recipe = Connection.Table<SaveRecipe>().Where(c => c.Name == viewModel.Title).ToList();
+
+            foreach (var item in recipe)
+            {
+                if (item.Name == viewModel.Title)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
     }
 }

@@ -7,12 +7,13 @@
               CachingStrategy="RecycleElement"
               ItemSelected="ListView_ItemSelected"
               SelectedItem="{Binding SelectedSaveRecipe}"
-              RowHeight="60">
+              RowHeight="40">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
-                    <StackLayout Padding="5">
-                        <Label Text="{Binding Name}"/>
+                    <StackLayout Padding="5" Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center">
+                        <Label IsVisible="{Binding Favorite}" Text="★" TextColor="BlueViolet" FontSize="22" VerticalOptions="Center"/>
+                        <Label Text="{Binding nome}" VerticalOptions="Center" LineBreakMode="TailTruncation" MaxLines="2"></Label>
                     </StackLayout>    
                 </ViewCell>                
             </DataTemplate>

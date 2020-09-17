@@ -15,7 +15,7 @@ namespace RecipeApp2.View
 		public HomePage ()
 		{
 			InitializeComponent ();
-		}       
-
+		}
+       
     }
 }

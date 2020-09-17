@@ -3,10 +3,10 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
             xmlns:local1="clr-namespace:RecipeApp2.View"
             x:Class="RecipeApp2.View.HomePage"
-            Title="Recipe App">    
-       
-    
-    <local1:HistoryPage Title="Receitas"/>
-    <local1:MyRecipesPage Title="Minhas Receitas"/>
-    <local1:FavoritePage Title="Favoritas"/>    
+            Title="Recipe App">
+
+
+    <local1:HistoryPage Icon="receita.png" Title="Receitas" />
+    <local1:MyRecipesPage Icon="receita2.png" Title="Minhas Receitas"/>
+    <local1:FavoritePage Icon="receita3.png" Title="Favoritas"/>    
 </TabbedPage>

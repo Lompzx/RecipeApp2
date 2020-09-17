@@ -8,12 +8,13 @@
                   CachingStrategy="RecycleElement"       
                   ItemSelected="ListView_ItemSelected"
                   SelectedItem="{Binding SelectedRecipe}"
-                  RowHeight="60">
+                  RowHeight="40"
+                  >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Padding="5">
-                            <Label Text="{Binding nome}"></Label>
+                        <StackLayout Padding="5" Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center">
+                        <Label Text="{Binding nome}" VerticalOptions="Center" LineBreakMode="TailTruncation" MaxLines="1"></Label>                            
                        </StackLayout>
                     </ViewCell>
                 </DataTemplate>

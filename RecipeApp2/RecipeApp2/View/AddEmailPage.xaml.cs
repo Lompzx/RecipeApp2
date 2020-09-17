@@ -61,15 +61,17 @@ namespace RecipeApp2.View
             {
                 if (Regex.Replace(email,expression,string.Empty).Length == 0)
                 {
-                    var listEmail = Connection.Table<EmailModel>();
-                    foreach (var item in listEmail)
-                    {
-                        if (item.Email == email)
+                    Connection.CreateTable<EmailModel>();
+                    var listEmail = Connection.Table<EmailModel>();                    
+                        foreach (var item in listEmail)
                         {
-                            DisplayAlert("Atenção", "Email já cadastrado!!", "OK");
-                            return false;
+                            if (item.Email == email)
+                            {
+                                DisplayAlert("Atenção", "Email já cadastrado!!", "OK");
+                                return false;
+                            }
                         }
-                    }
+                    
                     return true;
                 }
             }

@@ -18,7 +18,7 @@ namespace RecipeApp2.View
     public partial class MyRecipePageDetails : ContentPage
     {
         DetailsRecipeViewModel viewModel;
-
+        SQLiteConnection Connection = new SQLiteConnection(App.DatabaseLocation);
         public MyRecipePageDetails(SaveRecipe SelectedSaveRecipe)
         {
             InitializeComponent();
@@ -33,17 +33,17 @@ namespace RecipeApp2.View
                 SaveRecipe recipeModel = new SaveRecipe()
                 {
                     Id = viewModel.Id,
-                    Name = viewModel.Title + " *",
+                    Name = viewModel.Title,
                     Ingredients = viewModel.Ingredients,
                     Preparation = viewModel.Preparation,
                     Favorite = true
-                };
-                SQLiteConnection Connection = new SQLiteConnection(App.DatabaseLocation);
+                };                
                 Connection.CreateTable<SaveRecipe>();
                 int rowsQuantity = Connection.Update(recipeModel);
                 if (rowsQuantity > 0)
                 {
                     await DisplayAlert("Mensagem", "Receita Favoritada", "OK");
+                    await Navigation.PopAsync();
                 }
                 else
                 {
@@ -54,13 +54,13 @@ namespace RecipeApp2.View
             else
             {
                 await DisplayAlert("Atenção", "Receita já Favoritada", "OK");
+                await Navigation.PopAsync();
 
             }
         }
 
         bool FavoriteIsValid(int id)
-        {
-            SQLiteConnection Connection = new SQLiteConnection(App.DatabaseLocation);
+        {            
             Connection.CreateTable<SaveRecipe>();
             List<SaveRecipe> favorite = Connection.Table<SaveRecipe>().Where(c => c.Id == viewModel.Id).ToList();
             foreach (var item in favorite)
