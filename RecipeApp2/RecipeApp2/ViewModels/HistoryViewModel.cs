@@ -16,7 +16,7 @@ namespace RecipeApp2.ViewModels
         private readonly HttpClient _client = new HttpClient();
 
         public ObservableCollection<RecipeModel> Items { get; set; }
-
+        public string MessageError { get; set; }
         public RecipeModel SelectedRecipe { get; set; }
         public SaveRecipe SelectedSaveRecipe { get; set; }
 
@@ -27,12 +27,20 @@ namespace RecipeApp2.ViewModels
 
         async void LoadingRecipes()
         {
-            string rescontent = await _client.GetStringAsync(Constants.RECIPEJSON_URL);
-            List<RecipeModel> recipes = JsonConvert.DeserializeObject<List<RecipeModel>>(rescontent);
-            Items = new ObservableCollection<RecipeModel>(recipes);
-            OnPropertyChanged(nameof(Items));
+            try
+            {
+                string rescontent = await _client.GetStringAsync(Constants.RECIPEJSON_URL);
+                List<RecipeModel> recipes = JsonConvert.DeserializeObject<List<RecipeModel>>(rescontent);
+                Items = new ObservableCollection<RecipeModel>(recipes);
+                OnPropertyChanged(nameof(Items));
+            }
+            catch (Exception e)
+            {
+                MessageError = e.Message;
+            }
         }
 
+        
     }
 
 }

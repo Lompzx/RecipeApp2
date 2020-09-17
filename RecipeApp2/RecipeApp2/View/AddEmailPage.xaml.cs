@@ -38,18 +38,25 @@ namespace RecipeApp2.View
                     PassWord = "123"
                 };
 
-                //Create IF NOT exists
-                Connection.CreateTable<EmailModel>();
-                int rowsQuantity = Connection.Insert(emailModel);
-                Connection.Close();
-                if (rowsQuantity > 0)
+                try
                 {
-                    DisplayAlert("Sucesso!", "Email cadastrado com sucesso!", "OK");
-                    Navigation.PushAsync(new HomePage());
+                    //Create IF NOT exists
+                    Connection.CreateTable<EmailModel>();
+                    int rowsQuantity = Connection.Insert(emailModel);
+                    Connection.Close();
+                    if (rowsQuantity > 0)
+                    {
+                        DisplayAlert("Sucesso!", "Email cadastrado com sucesso!", "OK");
+                        Navigation.PushAsync(new HomePage());
+                    }
+                    else
+                    {
+                        DisplayAlert("Falha", "Dados não inseridos no DB", "Ok");
+                    }
                 }
-                else
+                catch (Exception err)
                 {
-                    DisplayAlert("Falha", "Dados não inseridos no DB", "Ok");
+                    DisplayAlert("Erro ", err.Message, "OK");
                 }
             }
         }
@@ -61,23 +68,28 @@ namespace RecipeApp2.View
             {
                 if (Regex.Replace(email, expression, string.Empty).Length == 0)
                 {
-                    Connection.CreateTable<EmailModel>();
-                    var listEmail = Connection.Table<EmailModel>();
-                    foreach (var item in listEmail)
+                    try
                     {
-                        if (item.Email == email)
+                        Connection.CreateTable<EmailModel>();
+                        var listEmail = Connection.Table<EmailModel>();
+                        foreach (var item in listEmail)
                         {
-                            DisplayAlert("Atenção", "Email já cadastrado!!", "OK");
-                            return false;
+                            if (item.Email == email)
+                            {
+                                DisplayAlert("Atenção", "Email já cadastrado!!", "OK");
+                                return false;
+                            }
                         }
                     }
-
+                    catch (Exception e)
+                    {
+                        DisplayAlert("Erro ", e.Message, "OK");  
+                    }
                     return true;
                 }
             }
             DisplayAlert("Atenção", "Email inválido, dominio apenas (@senac.edu.br) !", "Ok");
             return false;
         }
-
     }
 }

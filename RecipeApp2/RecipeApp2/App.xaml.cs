@@ -12,7 +12,6 @@ namespace RecipeApp2
         public App()
         {
             InitializeComponent();
-
             MainPage = new NavigationPage(new MainPage());
         }
 
@@ -20,7 +19,6 @@ namespace RecipeApp2
         {
             InitializeComponent();
             MainPage = new NavigationPage(new MainPage());
-
             DatabaseLocation = databaseLocation;
         }
 

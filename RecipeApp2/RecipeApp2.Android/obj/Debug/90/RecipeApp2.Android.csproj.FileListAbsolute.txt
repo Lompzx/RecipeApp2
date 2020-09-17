@@ -34,6 +34,9 @@ E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\R.cs.flag
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\R.txt
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\uploadflags.txt
+E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\res\drawable\receita.png
+E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\res\drawable\receita2.png
+E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\res\drawable\receita3.png
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\bin\Debug\FormsViewGroup.pdb
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\bin\Debug\Mono.Android.pdb
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\bin\Debug\mscorlib.pdb
@@ -105,9 +108,6 @@ E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\android\assets\Xamarin.Forms.Core.pdb
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\android\assets\Xamarin.Forms.Platform.Android.pdb
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\android\assets\Xamarin.Forms.Xaml.pdb
-E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\res\drawable\receita.png
-E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\res\drawable\receita2.png
-E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\res\drawable\receita3.png
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2\bin\Debug\netstandard2.0\RecipeApp2.dll
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\bin\Debug\RecipeApp2.dll.mdb
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\linksrc\RecipeApp2.dll.mdb

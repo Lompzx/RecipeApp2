@@ -18,11 +18,19 @@ namespace RecipeApp2.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HistoryPage : ContentPage
     {
-        HistoryViewModel viewModel;
+        HistoryViewModel viewModel;       
         public HistoryPage()
         {
             InitializeComponent();
-            BindingContext = viewModel = new HistoryViewModel();
+            try
+            {
+                BindingContext = viewModel = new HistoryViewModel();
+            }
+            catch (Exception e)
+            {
+                DisplayAlert("Atenção","Erro: " + viewModel.MessageError +"\n" + e.Message,"OK");
+            }
+            
         }
 
         private async void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)

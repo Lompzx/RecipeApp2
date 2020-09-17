@@ -24,12 +24,19 @@ namespace RecipeApp2.View
 
         protected override void OnAppearing()
         {
-            base.OnAppearing();
-            SQLiteConnection Connection = new SQLiteConnection(App.DatabaseLocation);
-            Connection.CreateTable<SaveRecipe>();
-            var RecipePost = Connection.Table<SaveRecipe>().Where(c => c.Favorite == true).ToList();
-            RecipePostView.ItemsSource = RecipePost;
-            Connection.Close();
+            try
+            {
+                base.OnAppearing();
+                SQLiteConnection Connection = new SQLiteConnection(App.DatabaseLocation);
+                Connection.CreateTable<SaveRecipe>();
+                var RecipePost = Connection.Table<SaveRecipe>().Where(c => c.Favorite == true).ToList();
+                RecipePostView.ItemsSource = RecipePost;
+                Connection.Close();
+            }
+            catch (Exception e)
+            {
+                DisplayAlert("Erro ", e.Message, "OK");
+            }
         }
 
         private async void ListView_ItemSelected(object sender, EventArgs e)
@@ -39,7 +46,5 @@ namespace RecipeApp2.View
                 await Navigation.PushAsync(new FavoritePageDetails(viewModel.SelectedSaveRecipe));
             }
         }
-
-
     }
 }

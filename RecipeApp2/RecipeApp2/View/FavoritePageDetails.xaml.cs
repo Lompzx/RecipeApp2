@@ -34,16 +34,23 @@ namespace RecipeApp2.View
                 Preparation = viewModel.Preparation,
                 Favorite = false
             };
-            Connection.CreateTable<SaveRecipe>();
-            int rowsQuantity = Connection.Update(recipeModel);
-            if (rowsQuantity > 0)
+            try
             {
-                await DisplayAlert("Mensagem", "Receita Removida dos Favoritos", "OK");
-                await Navigation.PopAsync();
+                Connection.CreateTable<SaveRecipe>();
+                int rowsQuantity = Connection.Update(recipeModel);
+                if (rowsQuantity > 0)
+                {
+                    await DisplayAlert("Mensagem", "Receita Removida dos Favoritos", "OK");
+                    await Navigation.PopAsync();
+                }
+                else
+                {
+                    await DisplayAlert("Erro", "Não foi possivel desfavoritar a receita", "OK");
+                }
             }
-            else
+            catch (Exception err)
             {
-                await DisplayAlert("Erro", "Não foi possivel desfavoritar a receita", "OK");
+                await DisplayAlert("Erro ",err.Message,"OK");   
             }
         }
     }

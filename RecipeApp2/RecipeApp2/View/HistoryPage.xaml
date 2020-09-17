@@ -14,13 +14,13 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Padding="5" Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center">
-                            <Label Text="{Binding nome}" VerticalOptions="Center" LineBreakMode="TailTruncation" MaxLines="1"></Label>
-                        </StackLayout>
+                            <Label Text="{Binding nome}" VerticalOptions="Center" LineBreakMode="TailTruncation" MaxLines="1"></Label>                            
+                        </StackLayout>                        
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-        </ListView>
-    </ContentPage.Content>
+        </ListView>        
+    </ContentPage.Content>    
 </ContentPage>
 
 

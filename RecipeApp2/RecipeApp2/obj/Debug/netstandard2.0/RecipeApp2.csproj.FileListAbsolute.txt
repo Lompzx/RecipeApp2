@@ -4,7 +4,6 @@ E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2\bin\Debug\netstandard
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2\obj\Debug\netstandard2.0\App.xaml.g.cs
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2\obj\Debug\netstandard2.0\View\AddEmailPage.xaml.g.cs
-E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2\obj\Debug\netstandard2.0\View\AddRecipePage.xaml.g.cs
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2\obj\Debug\netstandard2.0\View\HistoryDetailPage.xaml.g.cs
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2\obj\Debug\netstandard2.0\View\HistoryPage.xaml.g.cs
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2\obj\Debug\netstandard2.0\View\HomePage.xaml.g.cs
@@ -16,6 +15,6 @@ E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2\obj\Debug\netstandard
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2\obj\Debug\netstandard2.0\RecipeApp2.dll
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2\obj\Debug\netstandard2.0\RecipeApp2.pdb
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2\obj\Debug\netstandard2.0\View\MyRecipePage.xaml.g.cs
-E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2\obj\Debug\netstandard2.0\RecipeApp2.csprojAssemblyReference.cache
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2\obj\Debug\netstandard2.0\View\FavoritePage.xaml.g.cs
 E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2\obj\Debug\netstandard2.0\View\FavoritePageDetails.xaml.g.cs
+E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2\obj\Debug\netstandard2.0\RecipeApp2.csprojAssemblyReference.cache

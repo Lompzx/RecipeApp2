@@ -19,8 +19,7 @@
                Placeholder="Senha"
                TextColor="{StaticResource blackColor}"
                IsPassword="True"/>
-        <Button x:Name="LoginButton"
-                Margin="0,50"
+        <Button x:Name="LoginButton"               
                 Text="Login"
                 Clicked="LoginButton_Clicked"
                 BackgroundColor="White"
@@ -28,8 +27,7 @@
                 BorderWidth="1"
                 BorderRadius="1"
                 TextColor="Black" />
-        <Button x:Name="NovoButton"
-                Margin="0,50"
+        <Button x:Name="NovoButton"                
                 Text="Novo"
                 Clicked="NovoButton_Clicked"
                 BackgroundColor="White"

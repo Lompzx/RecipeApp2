@@ -38,16 +38,20 @@ namespace RecipeApp2.View
                     Favorite = false
                 };
 
-                Connection.CreateTable<SaveRecipe>();
-                int rowsQuantity = Connection.Insert(recipeModel);
-                if (rowsQuantity > 0)
+                try
                 {
-                    await DisplayAlert("Sucesso!", "Receita cadastrada com sucesso", "OK");
-                    await Navigation.PopAsync();
+                    Connection.CreateTable<SaveRecipe>();
+                    int rowsQuantity = Connection.Insert(recipeModel);
+                    if (rowsQuantity > 0)
+                    {
+                        await DisplayAlert("Sucesso!", "Receita cadastrada com sucesso", "OK");
+                        await Navigation.PopAsync();
+                    }
                 }
-                else
+                catch (Exception err)
                 {
-                    await DisplayAlert("Falha!", "Receita não cadastrada!", "OK");
+                    await DisplayAlert("Falha!", "Receita não cadastrada! \n" + err.Message, "OK");
+
                 }
             }
             else
@@ -55,23 +59,27 @@ namespace RecipeApp2.View
                 await DisplayAlert("Atenção", "Receita já cadastrada", "OK");
                 await Navigation.PopAsync();
             }
-
         }
 
         bool RecipeIsValid(string name)
         {
-            Connection.CreateTable<SaveRecipe>();
-            var recipe = Connection.Table<SaveRecipe>().Where(c => c.Name == viewModel.Title).ToList();
-
-            foreach (var item in recipe)
+            try
             {
-                if (item.Name == viewModel.Title)
+                Connection.CreateTable<SaveRecipe>();
+                var recipe = Connection.Table<SaveRecipe>().Where(c => c.Name == viewModel.Title).ToList();
+                foreach (var item in recipe)
                 {
-                    return true;
+                    if (item.Name == viewModel.Title)
+                    {
+                        return true;
+                    }
                 }
+            }
+            catch (Exception err)
+            {
+                DisplayAlert("Erro", err.Message , "OK");
             }
             return false;
         }
-
     }
 }

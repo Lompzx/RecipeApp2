@@ -38,40 +38,52 @@ namespace RecipeApp2.View
                     Preparation = viewModel.Preparation,
                     Favorite = true
                 };
-                Connection.CreateTable<SaveRecipe>();
-                int rowsQuantity = Connection.Update(recipeModel);
-                if (rowsQuantity > 0)
+                try
                 {
-                    await DisplayAlert("Mensagem", "Receita Favoritada", "OK");
-                    await Navigation.PopAsync();
-                }
-                else
-                {
-                    await DisplayAlert("Erro", "Não foi possivel favoritar a receita", "OK");
-                }
+                    Connection.CreateTable<SaveRecipe>();
+                    int rowsQuantity = Connection.Update(recipeModel);
+                    if (rowsQuantity > 0)
+                    {
+                        await DisplayAlert("Mensagem", "Receita Favoritada", "OK");
+                        await Navigation.PopAsync();
+                    }
+                    else
+                    {
+                        await DisplayAlert("Erro", "Não foi possivel favoritar a receita", "OK");
+                    }
 
+                }
+                catch (Exception err)
+                {
+                    await DisplayAlert("Erro ", err.Message, "OK");
+                }
             }
             else
             {
                 await DisplayAlert("Atenção", "Receita já Favoritada", "OK");
                 await Navigation.PopAsync();
-
             }
         }
 
         bool FavoriteIsValid(int id)
         {
-            Connection.CreateTable<SaveRecipe>();
-            List<SaveRecipe> favorite = Connection.Table<SaveRecipe>().Where(c => c.Id == viewModel.Id).ToList();
-            foreach (var item in favorite)
+            try
             {
-                if (item.Favorite == true)
+                Connection.CreateTable<SaveRecipe>();
+                List<SaveRecipe> favorite = Connection.Table<SaveRecipe>().Where(c => c.Id == viewModel.Id).ToList();
+                foreach (var item in favorite)
                 {
-                    return true;
+                    if (item.Favorite == true)
+                    {
+                        return true;
+                    }
                 }
+            }
+            catch (Exception e)
+            {
+                DisplayAlert("Erro ", e.Message,"OK");
             }
             return false;
         }
-
     }
 }

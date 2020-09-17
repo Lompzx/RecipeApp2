@@ -26,12 +26,20 @@ namespace RecipeApp2.View
 
         protected override void OnAppearing()
         {
-            base.OnAppearing();
-            SQLiteConnection Connection = new SQLiteConnection(App.DatabaseLocation);
-            Connection.CreateTable<SaveRecipe>();
-            var RecipePost = Connection.Table<SaveRecipe>().ToList();
-            RecipePostView.ItemsSource = RecipePost;
-            Connection.Close();
+            try
+            {
+                base.OnAppearing();
+                SQLiteConnection Connection = new SQLiteConnection(App.DatabaseLocation);
+                Connection.CreateTable<SaveRecipe>();
+                var RecipePost = Connection.Table<SaveRecipe>().ToList();
+                RecipePostView.ItemsSource = RecipePost;
+                Connection.Close();
+            }
+            catch (Exception e)
+            {
+                DisplayAlert("Erro ", e.Message,"OK");
+            }
+            
         }
 
         private async void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)

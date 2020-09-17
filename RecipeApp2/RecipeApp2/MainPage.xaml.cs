@@ -26,7 +26,6 @@ namespace RecipeApp2
             bool IsEmailEmpty = string.IsNullOrWhiteSpace(EmailEntry.Text);
             bool IsPasswordEmpty = string.IsNullOrWhiteSpace(PasswordEntry.Text);
 
-
             if (IsEmailEmpty || IsPasswordEmpty)
             {
 
@@ -46,15 +45,22 @@ namespace RecipeApp2
         bool EmailIsValid(string email, string password)
         {
             SQLiteConnection Connection = new SQLiteConnection(App.DatabaseLocation);
-            Connection.CreateTable<EmailModel>();
-            var listEmail = Connection.Table<EmailModel>();            
-            foreach (var item in listEmail)
-            {
-                if (item.Email == email && item.PassWord == password)
+            try
+            {                
+                Connection.CreateTable<EmailModel>();
+                var listEmail = Connection.Table<EmailModel>();
+                foreach (var item in listEmail)
                 {
-                    Connection.Close();
-                    return true;                    
-                }
+                    if (item.Email == email && item.PassWord == password)
+                    {
+                        Connection.Close();
+                        return true;
+                    }
+                }                
+            }
+            catch (Exception e)
+            {
+                DisplayAlert("Erro ", e.Message, "OK");   
             }
             Connection.Close();
             return false;
