@@ -1,1 +1,6 @@
-E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2\bin\Debug\netstandard2.0\RecipeApp2.dll
+E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
+E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\build.props
+E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\adb.props
+E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\RecipeApp2.Android.csprojAssemblyReference.cache
+E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\stamp\_BuildLibraryImportsCache.stamp
+E:\Projetos\Projetos Pós\RecipeApp2\RecipeApp2\RecipeApp2.Android\obj\Debug\90\res.flag
