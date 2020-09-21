@@ -88,7 +88,7 @@ namespace RecipeApp2.View
                     return true;
                 }
             }
-            DisplayAlert("Atenção", "Email inválido, dominio apenas (@senac.edu.br) !", "Ok");
+            DisplayAlert("Atenção", "Email inválido, dominio apenas (@senac.edu.com.br) !", "Ok");
             return false;
         }
     }
